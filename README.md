@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution page on Frontend Mentor]()
+- Solution URL: [Solution page on Frontend Mentor](https://www.frontendmentor.io/solutions/ping-coming-soon-page-1yRrSq2jG)
 - Github Pages URL: [Github Pages](https://rachmatilham.github.io/ping-coming-soon-page-master/)
 
 ## My process
