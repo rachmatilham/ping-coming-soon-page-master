@@ -1,0 +1,237 @@
+:root {
+  --blue: hsl(223, 87%, 63%);
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+}
+
+main {
+  text-align: center;
+  margin: 25px;
+  margin-top: 80px;
+}
+
+header img {
+  width: 55px;
+}
+
+article {
+  position: relative;
+  margin: auto;
+  height: 445px;
+  max-width: 640px;
+}
+
+article h1 {
+  margin-top: 40px;
+  font-size: 1.1em;
+  font-weight: 300;
+  color: var(--gray);
+}
+
+article h1 span {
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+
+article h2 {
+  margin-top: 15px;
+  font-size: 0.6em;
+  font-weight: 300;
+  color: var(--very-dark-blue);
+}
+
+form {
+  margin: 20px;
+}
+
+form input {
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid var(--pale-blue);
+  padding-left: 30px;
+  color: var(--gray);
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 300;
+}
+
+form input.active {
+  border: 1px solid var(--light-red);
+  outline: none;
+}
+
+form .alert {
+  font-style: oblique;
+  color: var(--light-red);
+  margin-top: 5px;
+  font-weight: 300;
+  font-size: 0.5em;
+  margin-bottom: 15px;
+  display: none;
+}
+
+form .alert.active {
+  display: block;
+}
+
+form button {
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: 0;
+  background-color: var(--blue);
+  color: white;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 600;
+}
+
+form button:hover {
+  background-color: hsl(224, 87%, 70%);
+}
+
+article img {
+  position: absolute;
+  left: 0;
+  top: 250px;
+  width: 100%;
+}
+
+footer.icon {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 105px;
+}
+
+footer.icon a {
+  width: 30px;
+  height: 30px;
+  padding: 7px;
+  border: 1px solid var(--pale-blue);
+  border-radius: 50%;
+  margin: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--blue);
+}
+
+footer.icon svg {
+  height: 100%;
+}
+
+footer.icon a:hover {
+  background-color: var(--blue);
+  fill: white;
+  border: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0px none;
+  padding: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+}
+
+footer.copyright {
+  margin-top: 23px;
+  font-size: 0.5em;
+  font-weight: 300;
+  color: var(--gray);
+}
+
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (min-width: 576px) {
+  header img {
+    width: 90px;
+  }
+
+  article {
+    height: 640px;
+  }
+
+  article h1 {
+    margin-top: 45px;
+    font-size: 2.4em;
+  }
+
+  article h2 {
+    margin-top: 20px;
+    font-size: 0.9em;
+  }
+
+  form {
+    margin: 0;
+    margin-top: 45px;
+    display: grid;
+    grid-template-areas:
+      "input button"
+      "alert button";
+    position: relative;
+  }
+
+  form input {
+    grid-area: input;
+    margin: 0;
+    width: 420px;
+    height: 56px;
+    border-radius: 28px;
+    font-size: 0.8em;
+  }
+
+  form button {
+    grid-area: button;
+    margin: 0;
+    width: 200px;
+    height: 56px;
+    border-radius: 28px;
+    position: absolute;
+    right: 0;
+    font-size: 0.8em;
+  }
+
+  form .alert {
+    grid-area: alert;
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 10px;
+    font-size: 0.6em;
+  }
+
+  article img {
+    top: 285px;
+  }
+
+  footer.copyright {
+    margin-top: 15px;
+    font-size: 0.6em;
+  }
+}
